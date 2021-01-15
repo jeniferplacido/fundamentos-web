@@ -19,15 +19,17 @@
         <div>
             <form>
         <label for="Nome">Nome:</label><br>
-        <input type="text" id="nome" onkeyup="validaNome">
+        <input type="text" id="nome" onkeyup='validaNome()'>
         <div id="txtNome"></div>
         <br>
         <label for="email">Email:</label><br>
-        <input type="email" id="email">
+        <input type="email" id="email" onkeyup="validaEmail()">
+        <div id='txtEmail'></div>
         <br>
         <br>
         <label for="Assunto">Assunto:</label><br>
-       <textarea name="assunto" id="assunto" cols="60" rows="5"></textarea>
+       <textarea name="assunto" id="assunto" cols="60" rows="5" onkeyup="validaAssunto()"></textarea>
+       <div id='txtAssunto'></div>
         <br>
         <br>
         <button type="submit">Enviar</button>
@@ -36,8 +38,8 @@
     <div class="ml-50"> <h2>Endereço:</h2>
     <p>Rua Lençois Paulista, 04</p>
     <p>Osasco-Sp</p>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.7814389087216!2d-46.78322658576334!3d-23.504380584711168!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cefef35d2a8735%3A0xe52bf4ad044ad167!2sR.%20Len%C3%A7%C3%B3is%20Paulista%2C%204%20-%20Rochdale%2C%20Osasco%20-%20SP%2C%2006226-030!5e0!3m2!1spt-BR!2sbr!4v1610643362794!5m2!1spt-BR!2sbr" width="400" height="250" 
-    frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    <iframe id="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.7814389087216!2d-46.78322658576334!3d-23.504380584711168!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cefef35d2a8735%3A0xe52bf4ad044ad167!2sR.%20Len%C3%A7%C3%B3is%20Paulista%2C%204%20-%20Rochdale%2C%20Osasco%20-%20SP%2C%2006226-030!5e0!3m2!1spt-BR!2sbr!4v1610643362794!5m2!1spt-BR!2sbr" width="400" height="250" 
+    frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" onmousemove="mapaZoom()" onmouseout="mapaNormal()"></iframe>
 </div>
     </div>
     <footer>
@@ -55,6 +57,8 @@
       </div>
        <p class="center"> Todos os direitos reservados: Jenifer Plácido &copy</p>
     </footer>
-    <script src="assets/js/script.js"></script>
+
+    <script src="/assets/js/script.js"></script>
+
 </body>
 </html>
