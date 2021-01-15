@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="C:\Users\user\Desktop\fundamentos-web\css\STYLE.CSS">
+    <link rel="stylesheet" href="C:\Users\user\Desktop\fundamentos-web\assets\css\STYLE.CSS">
     <title>Fale Comigo</title>
 </head>
 <ul id="menu">
@@ -19,8 +19,8 @@
         <div>
             <form>
         <label for="Nome">Nome:</label><br>
-        <input type="text" id="nome">
-        <br>
+        <input type="text" id="nome" onkeyup="validaNome">
+        <div id="txtNome"></div>
         <br>
         <label for="email">Email:</label><br>
         <input type="email" id="email">
@@ -55,6 +55,6 @@
       </div>
        <p class="center"> Todos os direitos reservados: Jenifer Plácido &copy</p>
     </footer>
-   
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
